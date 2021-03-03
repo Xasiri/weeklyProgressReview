@@ -1,0 +1,21 @@
+@import "../constants.scss";
+.navbar {
+    background-color: $primary-dark !important;
+}
+
+.navbar-text {
+    color: $primary !important;
+}
+
+
+.date-container {
+    display: flex;
+    justify-content: right;
+    padding-top: 10px;
+    padding-right: 10px;
+
+    &__text{
+       padding-left: 10px;
+       border-radius: 5px;
+    }
+}

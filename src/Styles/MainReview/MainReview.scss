@@ -1,0 +1,41 @@
+@import "../constants.scss";
+.main-review {
+  background-color: $gmp-background;
+
+  border: 1px solid;
+
+  @media (min-width: $large) {
+    max-width: none;
+  }
+  @media (min-width: $medium) {
+    max-width: none;
+  }
+  @media (min-width: $small) {
+    max-width: none;
+  }
+  @media (min-width: 200px) {
+    max-width: none;
+  }
+
+  &__team {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &__col1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &__col2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.cols {
+  padding-top: 10px;
+  border: 1px solid;
+}
