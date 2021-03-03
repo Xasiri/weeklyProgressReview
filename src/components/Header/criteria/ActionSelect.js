@@ -41,7 +41,7 @@ const ActionSelect = ({ dispatch, weekID, leaderCode, approval }) => {
       ...styles,
       overflow: "hidden",
       color: "red !important",
-      backgroundColor: approval.approvalComplete || "red",
+      // backgroundColor: approval.approvalComplete || "red",
 
       fontSize: 15,
       fontColor: "red",
@@ -69,15 +69,18 @@ const ActionSelect = ({ dispatch, weekID, leaderCode, approval }) => {
       };
     },
   };
-
+  console.log("afjs", approval);
   return (
-    <Select
-      className="font-weight-bold"
-      styles={colourStyles}
-      options={options}
-      onChange={actionSelectHandler}
-      placeholder={approval.approvalComplete}
-    />
+    <>
+      <Select
+        className="font-weight-bold"
+        styles={colourStyles}
+        options={options}
+        onChange={actionSelectHandler}
+        placeholder={approval.approvalComplete}
+      />
+      <p>{approval.date}</p>
+    </>
   );
 };
 

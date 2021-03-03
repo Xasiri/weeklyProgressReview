@@ -4,7 +4,7 @@ import ActionSelect from "./ActionSelect";
 
 const Action = ({ weeksForReview, dispatch, leaderCode }) => {
   return (
-    <Row>
+    <Row className="mb-5">
       <Col md={4} lg={2} className="main-review__col1">
         Action
       </Col>

@@ -9,34 +9,12 @@ const initialState = MeetingData;
 
 function reducer(initialState, action) {
   switch (action.type) {
-    // case ACTIONS.ADD_TEAMLEADER:
-    //   const result = initialState.filter(
-    //     (data) => data.TeamLeaderCode == action.payload.code
-    //   );
-
-    //   if (result.length) {
-    //     console.log(result[0].weekData, getCurrentWeek, result.length);
-
-    //     return result;
-    //   } else {
-    //     return initialState;
-    //   }
-
-    case ACTIONS.ADD_STARTDATE:
-      return produce(initialState, (draftState) => {
-        draftState.map((data) => {
-          data.startWeek = action.payload.startWeek;
-          console.log("Startsara", data.startWeek, action.payload.startWeek);
-        });
-      });
-
     case ACTIONS.ADD_ACTION:
       return produce(initialState, (draftState) => {
         draftState.map((data) => {
           if (data.TeamLeaderCode == action.payload.leaderCode) {
             data.weekData.map((week) => {
               if (week.weekID === action.payload.weekID) {
-                console.log("fjsjf", action.payload.actionComplete);
                 week.approval.approvalComplete = action.payload.actionComplete;
                 week.approval.date = action.payload.date;
               }
@@ -52,8 +30,6 @@ function reducer(initialState, action) {
           }
           data.weekData.map((week) => {
             if (week.weekID === action.payload.weekID) {
-              console.log("jshdjhds", action.payload);
-
               const newNote = {
                 name: action.payload.value,
                 isComplete: false,
@@ -105,7 +81,6 @@ const ReviewState = () => {
       weeksForReview.push(week);
     }
   });
-  console.log("review main", weekIs, leaderCode, weeksForReview);
 
   return (
     <>

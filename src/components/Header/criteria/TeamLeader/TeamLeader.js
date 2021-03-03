@@ -14,6 +14,7 @@ const TeamLeader = ({ setLeaderCode }) => {
       <Col className="main-review__team">Team Leader Code</Col>
       <Form onSubmit={handleSubmit}>
         <FormControl
+          className="text-center"
           onChange={(e) => setTeamLeader(e.target.value)}
           value={teamLeader}
         />

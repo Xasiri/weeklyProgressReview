@@ -18,7 +18,7 @@ const QuaoteInput = ({ quotationsData, weekID }) => {
           : "Quotation_Red"
       }
     >
-      <p>{calculatedPercentage}%</p>
+      <p className="Quotation_Percentage">{calculatedPercentage}%</p>
       <InputGroup>
         <InputGroup.Prepend>
           <InputGroup className="Quotation_Input">
