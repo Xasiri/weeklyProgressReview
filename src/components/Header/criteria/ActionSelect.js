@@ -41,14 +41,22 @@ const ActionSelect = ({ dispatch, weekID, leaderCode, approval }) => {
       ...styles,
       overflow: "hidden",
       color: "red !important",
-      // backgroundColor: approval.approvalComplete || "red",
+      backgroundColor: approval.approvalComplete || "red",
 
       fontSize: 15,
       fontColor: "red",
       paddingLeft: "center",
       height: 46,
     }),
-    singleValue: (styles) => ({ ...styles, color: "black" }),
+    singleValue: (styles) => ({
+      ...styles,
+      color:
+        approval.approvalComplete == "ABSENT"
+          ? "red"
+          : approval.approvalComplete == "COMPLETED"
+          ? "green"
+          : "yellow",
+    }),
     placeholder: (defaultStyles) => {
       return {
         ...defaultStyles,
