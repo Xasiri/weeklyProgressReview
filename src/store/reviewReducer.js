@@ -15,6 +15,7 @@ function reviewReducer(state = initialState, action) {
       });
 
     case ACTIONS.ADD_ACTION:
+      console.log("Add action", action);
       return produce(state, (draftState) => {
         draftState.map((data) => {
           if (data.TeamLeaderCode == action.payload.leaderCode) {

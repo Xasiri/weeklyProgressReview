@@ -81,7 +81,7 @@ const ActionSelect = ({ weekID, leaderCode, approval }) => {
         onChange={actionSelectHandler}
         placeholder={approval.approvalComplete}
       />
-      <p>{approval.date}</p>
+      <p className="mt-3">{approval.date}</p>
     </>
   );
 };
