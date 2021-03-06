@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import "./ActionSelect.css";
+import { useDispatch } from "react-redux";
+
 import { ACTIONS } from "../../reviewState/Actions";
 
 const options = [
@@ -19,8 +21,9 @@ function dateValue() {
   return newdate;
 }
 
-const ActionSelect = ({ dispatch, weekID, leaderCode, approval }) => {
+const ActionSelect = ({ weekID, leaderCode, approval }) => {
   const [completion, setCompletion] = useState("");
+  const dispatch = useDispatch();
 
   const actionSelectHandler = (selectedOption) => {
     setCompletion(selectedOption);
@@ -69,7 +72,6 @@ const ActionSelect = ({ dispatch, weekID, leaderCode, approval }) => {
       };
     },
   };
-  console.log("afjs", approval);
   return (
     <>
       <Select

@@ -1,14 +1,17 @@
 import React, { useState } from "react";
-import { Form, InputGroup } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { ACTIONS } from "../../../reviewState/Actions";
-import "../quotations/quotation.css";
+import { useDispatch } from "react-redux";
+import { Row, Col } from "react-bootstrap";
 
-const MeetingNoteCheck = ({ dispatch, notes, weekID, leaderCode }) => {
+import "../../../../Styles/Quotation/Quotation.scss";
+
+const MeetingNoteCheck = ({ notes, weekID, leaderCode }) => {
   const [addNote, setAddNote] = useState("");
+  const dispatch = useDispatch();
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("NoteChek", weekID);
     dispatch({
       type: ACTIONS.ADD_NOTES,
       payload: {
@@ -21,7 +24,6 @@ const MeetingNoteCheck = ({ dispatch, notes, weekID, leaderCode }) => {
     setAddNote("");
   };
   const checkedHandler = (e) => {
-    console.log("CheckedHandler", e.target.value, e.target.id);
     dispatch({
       type: ACTIONS.CHANGE_COMPLETE,
       payload: {
@@ -35,30 +37,29 @@ const MeetingNoteCheck = ({ dispatch, notes, weekID, leaderCode }) => {
   return (
     <>
       {notes.map((note, index) => (
-        <InputGroup key={index}>
-          <Form.Control
-            as="textarea"
-            rows={1}
-            placeholder={note.name}
-            readOnly
-          />
+        <Row key={index} className="MeetingNote__list">
+          <Col>
+            <p>{`${index + 1}. ${note.name}`} </p>
+          </Col>
 
-          <input
-            className="FormCheck"
-            type="checkbox"
-            id={note.ID}
-            checked={note.isComplete}
-            value={note.isComplete}
-            onChange={checkedHandler}
-          />
-        </InputGroup>
+          <Col xs={{ span: 1, offset: 5 }} md={{ span: 1, offset: 5 }}>
+            <input
+              className="MeetingNote_Check"
+              type="checkbox"
+              id={note.ID}
+              checked={note.isComplete}
+              value={note.isComplete}
+              onChange={checkedHandler}
+            />
+          </Col>
+        </Row>
       ))}
       <Form onSubmit={(event) => submitHandler(event)}>
         <Form.Control
+          className="MeetingNote__Note"
           onChange={(event) => setAddNote(event.target.value)}
           type="text"
           placeholder="+ Notes"
-          size="sm"
           value={addNote}
           id={weekID}
         />

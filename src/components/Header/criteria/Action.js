@@ -1,26 +1,26 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import ActionSelect from "./ActionSelect";
+import "../../../Styles/MainCard/MainCard.scss";
 
 const Action = ({ weeksForReview, dispatch, leaderCode }) => {
   return (
-    <Row className="mb-5">
-      <Col md={4} lg={2} className="main-review__col1">
-        Action
-      </Col>
-
-      {weeksForReview.map((a) => (
-        <Col key={a.weekID}>
+    <>
+      <Row className="margin-component">
+        <Col className="title-text">Action</Col>
+      </Row>
+      <Row className="mb-3">
+        <Col key={weeksForReview.weekID}>
           <ActionSelect
             dispatch={dispatch}
-            action={a.action}
-            weekID={a.weekID}
+            action={weeksForReview.action}
+            weekID={weeksForReview.weekID}
             leaderCode={leaderCode}
-            approval={a.approval}
+            approval={weeksForReview.approval}
           />
         </Col>
-      ))}
-    </Row>
+      </Row>
+    </>
   );
 };
 

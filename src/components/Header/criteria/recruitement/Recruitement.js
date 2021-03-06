@@ -1,23 +1,24 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { RecruitmentInput } from "./RecruitmentInput";
-import "../../../../Styles/MainReview/MainReview.scss";
+import "../../../../Styles/MainCard/MainCard.scss";
 
 const Recruitement = ({ weeksForReview }) => {
   return (
-    <Row className="my-1">
-      <Col md={4} lg={2} className="main-review__col1">
-        Recruitement
-      </Col>
-      {weeksForReview.map((a) => (
-        <Col key={a.weekID}>
+    <>
+      <Row className="margin-component">
+        {" "}
+        <Col className="title-text">Recruitement</Col>
+      </Row>
+      <Row>
+        <Col key={weeksForReview.weekID}>
           <RecruitmentInput
-            recruitmentData={a.recruitement}
-            weekID={a.weekID}
+            recruitmentData={weeksForReview.recruitement}
+            weekID={weeksForReview.weekID}
           />
         </Col>
-      ))}
-    </Row>
+      </Row>
+    </>
   );
 };
 

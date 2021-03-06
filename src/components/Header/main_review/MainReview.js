@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Action from "../criteria/Action";
 import ActiveAdvisors from "../criteria/ActiveAdvisors";
-import MeetingNotes from "../criteria/meetingNotes.js/MeetingNotes";
+import MeetingNotes from "../criteria/meetingNotes/MeetingNotes";
 import PendingClearence from "../criteria/pendingClearence.js/PendingClearence";
 import Quotations from "../criteria/quotations/Quotations";
 import Recruitement from "../criteria/recruitement/Recruitement";
@@ -29,12 +29,8 @@ const MainReview = ({
         <Col>Total</Col>
       </Row>
       <Row className="my-3">
-        <Col md="2" className="main-review__col2">
-          <TeamLeader dispatch={dispatch} setLeaderCode={setLeaderCode} />
-        </Col>
-
         <Col>
-          <Recruitement weeksForReview={weeksForReview} />
+          <Recruitement className="collapse" weeksForReview={weeksForReview} />
           <Quotations dispatch={dispatch} weeksForReview={weeksForReview} />
           <ActiveAdvisors weeksForReview={weeksForReview} />
           <PendingClearence weeksForReview={weeksForReview} />

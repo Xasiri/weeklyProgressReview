@@ -1,25 +1,48 @@
 import React, { useState } from "react";
-import { Col, FormControl, Form } from "react-bootstrap";
+import { Link, Redirect, useHistory } from "react-router-dom";
+import { Card, Button, Container, FormControl, Form } from "react-bootstrap";
 import "../../../../Styles/MainReview/MainReview.scss";
+import WeekPicker from "./WeekPicker";
 
-const TeamLeader = ({ setLeaderCode }) => {
-  const [teamLeader, setTeamLeader] = useState("01");
+const TeamLeader = ({ setTeamLeaderData }) => {
+  const [teamLeader, setTeamLeader] = useState("");
+  const [weekStart, setWeekStart] = useState("");
+  let history = useHistory();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLeaderCode(teamLeader);
+    // setLeaderCode(teamLeader);
+  };
+
+  const submitHandler = () => {
+    console.log(teamLeader, weekStart);
+    if (teamLeader && weekStart) {
+      setTeamLeaderData({ teamLeaderCode: teamLeader, weekStart: weekStart });
+      history.push("/week");
+    }
   };
 
   return (
-    <>
-      <Col className="main-review__team">Team Leader Code</Col>
-      <Form onSubmit={handleSubmit}>
-        <FormControl
-          className="text-center"
-          onChange={(e) => setTeamLeader(e.target.value)}
-          value={teamLeader}
-        />
-      </Form>
-    </>
+    <Container>
+      <Card>
+        <Card.Header>Enter Team Leader Code and Date</Card.Header>
+        <Card.Body>
+          <Card.Title>Team Leader Code</Card.Title>
+          <Form onSubmit={handleSubmit}>
+            <FormControl
+              onChange={(e) => setTeamLeader(e.target.value)}
+              type="number"
+              value={teamLeader}
+            />
+          </Form>
+          <WeekPicker setWeekStart={setWeekStart} />
+
+          <Button variant="primary" onClick={submitHandler}>
+            Submit{" "}
+          </Button>
+        </Card.Body>
+      </Card>
+    </Container>
   );
 };
 

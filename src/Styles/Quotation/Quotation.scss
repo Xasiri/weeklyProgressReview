@@ -1,0 +1,58 @@
+@import "../constants.scss";
+
+@media (min-width: 580) {
+}
+
+.Quotation_box {
+  padding: 5px !important;
+  text-align: center;
+  border: 3px solid;
+  border-color: aliceblue;
+  border-radius: 7px;
+}
+.Quotation_Green {
+  background-color: green;
+}
+
+.Quotation_Red {
+  background-color: red;
+}
+.Quotation_Amber {
+  background-color: #ffbf00;
+}
+
+.Quotation_Input {
+  font-size: 12px;
+  // width: 100%;
+}
+
+.Quotation_Append {
+  width: 5px;
+  font-size: 10px;
+}
+.Quotation_Percentage {
+  font-weight: bold;
+}
+
+.Quotation_Center {
+  text-align: center;
+}
+
+.MeetingNote__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0;
+  // padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+.MeetingNote_Check {
+  border: 10px solid;
+  border-color: aliceblue;
+}
+.MeetingNote_End {
+  margin-bottom: 1rem;
+}
+.MeetingNote__Note {
+  margin-top: 0.5rem;
+}
