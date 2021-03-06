@@ -1,6 +1,6 @@
 @import "../constants.scss";
 
-@media (min-width: 580) {
+@media (min-width: 576) {
 }
 
 .Quotation_box {
@@ -52,6 +52,7 @@
 }
 .MeetingNote_End {
   margin-bottom: 1rem;
+  margin-right: 0.25rem;
 }
 .MeetingNote__Note {
   margin-top: 0.5rem;

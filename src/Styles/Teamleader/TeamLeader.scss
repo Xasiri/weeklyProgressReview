@@ -1,0 +1,29 @@
+.TeamLeader-Form {
+  width: 227px;
+  margin-bottom: 1rem;
+}
+
+.TeamLeader-Submit {
+  margin-top: 1rem;
+}
+.TeamLeader-DatePicker {
+  display: block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  color: #495057;
+  height: 2.75rem;
+}
+.TeamLeader-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; // make sure the parent is full screen
+  height: 100%; // so
+}
+.TeamLeader-InValid {
+  color: red;
+  margin-top: 1rem;
+}

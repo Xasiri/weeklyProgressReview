@@ -21,6 +21,24 @@ export const MeetingData = [
         ],
       },
       {
+        weekID: "total",
+        quotations: { target: "25", achieved: "5" },
+        recruitement: { existing: 6, registrations: 20, newcodes: 10 },
+
+        pendingClearence: {
+          proposals: "3",
+          suspense: "250000",
+          renewals: "120000",
+          revivals: "25000",
+        },
+        notes: [
+          { name: "2", isComplete: false, ID: "35" },
+          { name: "Recruitment2", isComplete: false, ID: "36" },
+          { name: "Recruitment2", isComplete: false, ID: "37" },
+        ],
+        approval: { approvalComplete: "", date: "" },
+      },
+      {
         weekID: "10",
         quotations: { target: "25", achieved: "5" },
         recruitement: { existing: 6, registrations: 20, newcodes: 10 },

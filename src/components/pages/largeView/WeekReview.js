@@ -7,11 +7,9 @@ import MeetingNotes from "../../Header/criteria/meetingNotes/MeetingNotes";
 import PendingClearence from "../../Header/criteria/pendingClearence.js/PendingClearence";
 import Quotations from "../../Header/criteria/quotations/Quotations";
 import Recruitement from "../../Header/criteria/recruitement/Recruitement";
-import "./styles.css";
+// import "./styles.css";
 
 const WeekReview = ({ week, leaderCode }) => {
-  console.log(week);
-
   return (
     <Card
       style={{ width: "99%", marginBottom: "100px" }}

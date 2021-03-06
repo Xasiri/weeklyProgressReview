@@ -22,6 +22,10 @@ function App() {
     weekStart: "0",
   });
 
+  let userInput = false;
+  if (teamLeaderData.teamLeaderCode && teamLeaderData.weekStart) {
+    userInput = true;
+  }
   return (
     <TeamContext.Provider
       value={{
@@ -36,11 +40,20 @@ function App() {
             <Route path="/" exact>
               <TeamLeader setTeamLeaderData={setTeamLeaderData} />
             </Route>
-            <Route path="/week1/:weekNo">
-              <WeekReview />
-            </Route>
+
             <Route path="/week">
-              <CarousalComponent />
+              {userInput ? (
+                <CarousalComponent />
+              ) : (
+                <TeamLeader setTeamLeaderData={setTeamLeaderData} />
+              )}
+            </Route>
+            <Route path="/total">
+              {userInput ? (
+                <CarousalComponent />
+              ) : (
+                <TeamLeader setTeamLeaderData={setTeamLeaderData} />
+              )}
             </Route>
             <Redirect to="/" />
           </Switch>

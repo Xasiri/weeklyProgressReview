@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "../../../../Styles/Teamleader/TeamLeader.scss";
 
 const WeekPicker = ({ setWeekStart }) => {
   const [startDate, setStartDate] = useState();
@@ -16,6 +17,7 @@ const WeekPicker = ({ setWeekStart }) => {
   return (
     <div>
       <DatePicker
+        className="TeamLeader-DatePicker"
         selected={startDate}
         onChange={(date) => startDateHandler(date)}
         placeholderText="select a date"
