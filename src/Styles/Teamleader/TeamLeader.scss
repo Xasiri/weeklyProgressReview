@@ -1,5 +1,5 @@
 .TeamLeader-Form {
-  width: 227px;
+  width: 274px;
   margin-bottom: 1rem;
 }
 
@@ -9,6 +9,8 @@
 .TeamLeader-DatePicker {
   display: block;
   padding: 0.375rem 0.75rem;
+  width: 274px;
+
   font-size: 1rem;
   font-weight: 400;
   border: 1px solid #ced4da;
@@ -26,4 +28,13 @@
 .TeamLeader-InValid {
   color: red;
   margin-top: 1rem;
+}
+
+@media (max-width: 560px) {
+  .TeamLeader-Form {
+    width: 190px;
+  }
+  .TeamLeader-DatePicker {
+    width: 190px;
+  }
 }

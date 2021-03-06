@@ -19,5 +19,10 @@
   text-align: center;
   font-weight: bold;
 }
-
+.CardLayout-Bodytext {
+  // font-size: 14px !important;
+}
+.MainView-col {
+  min-width: 150px !important;
+}
 // @import "../../../node_modules/bootstrap/scss/card";

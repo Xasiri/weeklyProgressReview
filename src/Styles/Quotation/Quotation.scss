@@ -1,8 +1,5 @@
 @import "../constants.scss";
 
-@media (min-width: 576) {
-}
-
 .Quotation_box {
   padding: 5px !important;
   text-align: center;
@@ -23,7 +20,7 @@
 
 .Quotation_Input {
   font-size: 12px;
-  // width: 100%;
+  width: 100%;
 }
 
 .Quotation_Append {
@@ -38,14 +35,6 @@
   text-align: center;
 }
 
-.MeetingNote__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0;
-  // padding-left: 1rem;
-  padding-right: 0.5rem;
-}
 .MeetingNote_Check {
   border: 10px solid;
   border-color: aliceblue;
@@ -56,4 +45,26 @@
 }
 .MeetingNote__Note {
   margin-top: 0.5rem;
+}
+.MeetingNote__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0;
+  // padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (max-width: 1000) {
+  .Quotation_box {
+    padding-right: 15px !important;
+    text-align: center;
+    border: 3px solid;
+    border-color: aliceblue;
+    border-radius: 7px;
+  }
+}
+@media (max-width: 768px) {
+  .MeetingNote__list {
+    padding-right: 0px;
+  }
 }

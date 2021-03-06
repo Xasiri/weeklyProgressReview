@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
+import "../../../../Styles/MainCard/MainCard.scss";
 
 const PendingInput = ({ pendingData }) => {
   const attribute = Object.entries(pendingData).map((e) => ({ [e[0]]: e[1] }));
@@ -8,10 +9,15 @@ const PendingInput = ({ pendingData }) => {
     <>
       {attribute.map((ele, index) => (
         <Row key={index}>
-          <Col md={6} lg={6} xs={6}>
+          <Col md={6} lg={6} xs={6} className="pr-0 CardLayout-Bodytext ">
             {Object.keys(ele)[0]}{" "}
           </Col>
-          <Col md={4} lg={6} xs={5}>
+          <Col
+            md={4}
+            lg={4}
+            xs={5}
+            className="pr-0 CardLayout-Bodytext text-right"
+          >
             {Object.values(ele)[0]}
           </Col>
         </Row>

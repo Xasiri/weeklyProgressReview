@@ -9,7 +9,8 @@ const QuaoteInput = ({ quotationsData, weekID }) => {
 
   return (
     <Col
-      xs={9}
+      md={11}
+      xs={12}
       sm={12}
       className={` Quotation_box ${
         calculatedPercentage > "99"

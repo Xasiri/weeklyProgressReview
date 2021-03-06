@@ -25,7 +25,7 @@ export default function CarousalComponent() {
       ) : (
         <Slider {...settings}>
           {results.weekResult.map((week) => (
-            <div>
+            <div className="pr-2">
               <WeekReview week={week} leaderCode={leaderCode} />
             </div>
           ))}

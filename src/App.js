@@ -5,15 +5,11 @@ import {
   Redirect,
   Switch,
 } from "react-router-dom";
-
+import "./Styles/index.scss";
 import { TeamContext } from "./context/TeamContext";
-import ReviewState from "./components/reviewState/ReviewState";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TeamLeader from "./components/Header/criteria/TeamLeader/TeamLeader";
 import MainNavigation from "./UIElements/navigation/MainNavigation";
-import WeekReview from "./components/pages/largeView/WeekReview";
-import useWindowDimensions from "./components/customHooks/getWindow";
-import WeekOne from "./components/pages/largeView/WeekOne";
 import CarousalComponent from "./components/pages/largeView/CarousalComponent";
 
 function App() {

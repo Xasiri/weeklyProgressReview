@@ -10,7 +10,7 @@ const Action = ({ weeksForReview, dispatch, leaderCode }) => {
         <Col className="title-text">Action</Col>
       </Row>
       <Row className="mb-3">
-        <Col key={weeksForReview.weekID}>
+        <Col key={weeksForReview.weekID} className="mr-3">
           <ActionSelect
             dispatch={dispatch}
             action={weeksForReview.action}

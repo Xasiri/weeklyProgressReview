@@ -10,10 +10,10 @@ export const RecruitmentInput = ({ recruitmentData }) => {
     <>
       {attribute.map((ele, index) => (
         <Row key={index}>
-          <Col md={8} lg={8} xs={8} s={8}>
+          <Col md={6} lg={6} xs={6} s={8}>
             {Object.keys(ele)[0]}{" "}
           </Col>
-          <Col md={4} lg={4} xs={4}>
+          <Col md={4} lg={4} xs={5} className="pr-0 text-right">
             {Object.values(ele)[0]}
           </Col>
         </Row>

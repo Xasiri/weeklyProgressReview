@@ -13,7 +13,7 @@ const PendingClearence = ({ weeksForReview }) => {
   return (
     <>
       <Row className="margin-component">
-        <Col className="title-text">Pending Clearence</Col>
+        <Col className="title-text ">Pending Clearence</Col>
       </Row>
       <Row>
         <Col key={weeksForReview.weekID}>

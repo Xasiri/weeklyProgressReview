@@ -37,21 +37,17 @@ const MeetingNoteCheck = ({ notes, weekID, leaderCode }) => {
   return (
     <>
       {notes.map((note, index) => (
-        <Row key={index} className="MeetingNote__list">
-          <Col>
-            <p>{`${index + 1}. ${note.name}`} </p>
-          </Col>
+        <Row key={index} className="MeetingNote__list  pl-3">
+          <p>{`${index + 1}. ${note.name}`} </p>
 
-          <Col xs={{ span: 1, offset: 5 }} md={{ span: 1, offset: 5 }}>
-            <input
-              className="MeetingNote_Check"
-              type="checkbox"
-              id={note.ID}
-              checked={note.isComplete}
-              value={note.isComplete}
-              onChange={checkedHandler}
-            />
-          </Col>
+          <input
+            className="MeetingNote_Check"
+            type="checkbox"
+            id={note.ID}
+            checked={note.isComplete}
+            value={note.isComplete}
+            onChange={checkedHandler}
+          />
         </Row>
       ))}
       <Form onSubmit={(event) => submitHandler(event)}>
