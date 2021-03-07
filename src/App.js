@@ -10,7 +10,7 @@ import { TeamContext } from "./context/TeamContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TeamLeader from "./components/Header/criteria/TeamLeader/TeamLeader";
 import MainNavigation from "./UIElements/navigation/MainNavigation";
-import CarousalComponent from "./components/pages/largeView/CarousalComponent";
+import CarousalComponent from "./components/pages/largeView/Carosoul/CarousalComponent";
 
 function App() {
   const [teamLeaderData, setTeamLeaderData] = useState({

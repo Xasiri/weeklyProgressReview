@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import {
   Card,
   Button,
@@ -7,7 +7,6 @@ import {
   FormControl,
   Form,
   Row,
-  Col,
 } from "react-bootstrap";
 import "../../../../Styles/MainReview/MainReview.scss";
 import "../../../../Styles/Teamleader/TeamLeader.scss";

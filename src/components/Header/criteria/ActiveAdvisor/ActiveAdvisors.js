@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import QuaoteInput from "./quotations/QuaoteInput";
-import "../../../Styles/MainCard/MainCard.scss";
+import QuaoteInput from "../quotations/QuaoteInput";
+import "../../../../Styles/MainCard/MainCard.scss";
 
 const ActiveAdvisors = ({ weeksForReview }) => {
   return (

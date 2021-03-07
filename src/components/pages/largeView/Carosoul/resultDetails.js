@@ -13,7 +13,7 @@ export default function userResultWeeks(state, leaderCode, weekStart) {
       const r = weekStart + 3;
       if (
         (weekStart <= week.weekID && r >= week.weekID) ||
-        "total" == week.weekID
+        "total" === week.weekID
       ) {
         weeksForReview.push(week);
       }
@@ -24,7 +24,7 @@ export default function userResultWeeks(state, leaderCode, weekStart) {
       weeksForReview.push(arrayManipulation);
       weekResult = weeksForReview;
     }
-  } else if (weekResult.length == 0) error = true;
+  } else if (weekResult.length === 0) error = true;
   console.log(weekResult, error);
   const details = { weekResult: weekResult, error: error };
   return details;

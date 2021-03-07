@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Select from "react-select";
-import "./ActionSelect.css";
 import { useDispatch } from "react-redux";
+import { ACTIONS } from "../../../reviewState/Actions";
+import Select from "react-select";
 
-import { ACTIONS } from "../../reviewState/Actions";
+import "./ActionSelect.css";
 
 const options = [
   { value: "completed", label: "COMPLETED", color: "green" },
@@ -54,9 +54,9 @@ const ActionSelect = ({ weekID, leaderCode, approval }) => {
     singleValue: (styles) => ({
       ...styles,
       color:
-        approval.approvalComplete == "ABSENT"
+        approval.approvalComplete === "ABSENT"
           ? "red"
-          : approval.approvalComplete == "COMPLETED"
+          : approval.approvalComplete === "COMPLETED"
           ? "green"
           : "yellow",
     }),
@@ -64,9 +64,9 @@ const ActionSelect = ({ weekID, leaderCode, approval }) => {
       return {
         ...defaultStyles,
         color:
-          approval.approvalComplete == "ABSENT"
+          approval.approvalComplete === "ABSENT"
             ? "red"
-            : approval.approvalComplete == "COMPLETED"
+            : approval.approvalComplete === "COMPLETED"
             ? "green"
             : "yellow",
       };

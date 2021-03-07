@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import ActionSelect from "./ActionSelect";
-import "../../../Styles/MainCard/MainCard.scss";
+import "../../../../Styles/MainCard/MainCard.scss";
 
 const Action = ({ weeksForReview, dispatch, leaderCode }) => {
   return (

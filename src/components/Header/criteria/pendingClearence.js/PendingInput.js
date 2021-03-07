@@ -9,15 +9,10 @@ const PendingInput = ({ pendingData }) => {
     <>
       {attribute.map((ele, index) => (
         <Row key={index}>
-          <Col md={6} lg={6} xs={6} className="pr-0 CardLayout-Bodytext ">
+          <Col md={6} lg={6} xs={6} className="pr-0  ">
             {Object.keys(ele)[0]}{" "}
           </Col>
-          <Col
-            md={4}
-            lg={4}
-            xs={5}
-            className="pr-0 CardLayout-Bodytext text-right"
-          >
+          <Col md={4} lg={4} xs={5} className="pr-0 text-right">
             {Object.values(ele)[0]}
           </Col>
         </Row>

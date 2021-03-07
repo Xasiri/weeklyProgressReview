@@ -2,7 +2,6 @@
   margin: 0 auto;
   padding: 30px 50px 20px 50px;
   width: 1200px;
-  background-color: rgb(204, 204, 216);
 }
 .slick-next:before,
 .slick-prev:before {
@@ -65,7 +64,19 @@
 }
 @media screen and (max-width: 460px) {
   .container {
-    padding: 30px 50px 20px 50px;
-    width: 330px;
+    padding: 10px 30px 20px 30px;
+    width: 380px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 10px 10px 20px 10px;
+    width: 340px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 10px 10px 20px 10px;
+    width: 290px;
   }
 }

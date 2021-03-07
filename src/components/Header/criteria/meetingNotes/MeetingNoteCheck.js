@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { ACTIONS } from "../../../reviewState/Actions";
 import { useDispatch } from "react-redux";
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 import "../../../../Styles/Quotation/Quotation.scss";
 

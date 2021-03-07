@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { Row, Col, Card, Container, Button } from "react-bootstrap";
+import React from "react";
+import { Row, Col, Card } from "react-bootstrap";
 
-import Action from "../../Header/criteria/Action";
-import ActiveAdvisors from "../../Header/criteria/ActiveAdvisors";
+import Action from "../../Header/criteria/ActionSelect/Action";
+import ActiveAdvisors from "../../Header/criteria/ActiveAdvisor/ActiveAdvisors";
 import MeetingNotes from "../../Header/criteria/meetingNotes/MeetingNotes";
 import PendingClearence from "../../Header/criteria/pendingClearence.js/PendingClearence";
 import Quotations from "../../Header/criteria/quotations/Quotations";
@@ -12,7 +12,7 @@ import "../../../Styles/MainCard/MainCard.scss";
 
 const WeekReview = ({ week, leaderCode }) => {
   let heading;
-  if (week.weekID == "total") {
+  if (week.weekID === "total") {
     heading = "Total";
   } else heading = `Week No ${week.weekID}`;
   return (
