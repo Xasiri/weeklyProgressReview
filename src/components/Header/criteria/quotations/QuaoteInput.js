@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FormControl, InputGroup, Col } from "react-bootstrap";
 import "../../../../Styles/Quotation/Quotation.scss";
 const QuaoteInput = ({ quotationsData, weekID }) => {
-  const [target, setTarget] = useState("25");
+  const [target, setTarget] = useState("35");
   const [actual, setActual] = useState("30");
 
   let calculatedPercentage = Math.round((actual / target) * 100);

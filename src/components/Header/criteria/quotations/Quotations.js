@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import QuaoteInput from "./QuaoteInput";
 import "../../../../Styles/MainCard/MainCard.scss";
 
-const Quotations = ({ weeksForReview, dispatch }) => {
+const Quotations = ({ weeksForReview }) => {
   return (
     <>
       <Row className="margin-quaotation">
